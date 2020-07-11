@@ -1,0 +1,23 @@
+.contact-list{
+    background: #ddd;
+    padding: 10px;
+    display: flex;
+    margin: 20px 0;
+    min-height: 100px;
+
+    &__desc{
+        flex: 3;
+    }
+
+    &__action{
+        flex: 1;
+        text-align: right;
+        position: relative;
+
+        button{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+    }
+}

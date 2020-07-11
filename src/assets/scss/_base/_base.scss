@@ -1,0 +1,57 @@
+$bp-largest: 75em;   // 1200px
+$bp-large: 62.5em;   // 1000px
+$bp-medium: 50em;    // 800px;
+$bp-small: 37.5em;    // 600px;
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    height: 100%;
+
+    @media only screen and (max-width: $bp-largest) {
+        font-size: 50%;
+    }
+
+    @media only screen and (max-width: $bp-large ) {
+        font-size: 40%;
+    }
+
+    @media only screen and (max-width: $bp-medium ) {
+        font-size: 30%;
+    }
+
+    @media only screen and (max-width: $bp-small ) {
+        font-size: 20%;
+    }
+}
+
+body {
+    box-sizing: border-box;
+    height: 100%;
+}
+
+.contacts-app-container{
+    width: 85%;
+    margin: 0 auto;
+}
+
+.container--fit {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.grid-container{
+    display: grid;
+    grid-gap:10px
+}
+
+.btn{
+    padding: 5px 10px;
+}
+

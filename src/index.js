@@ -5,6 +5,7 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import axios from 'axios'
 import store from "./store/index";
+import './assets/scss/index.scss'
 
 axios.defaults.baseURL = 'http://www.mocky.io/v2/';
 

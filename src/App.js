@@ -1,21 +1,12 @@
-import React, {useEffect} from 'react';
-import { fetchContacts } from "./store/actions/index";
-import { useDispatch,useSelector } from 'react-redux'
+import React from 'react';
+import Contact from './pages/contacts/contact'
+import Navbar from './components/navbar/navbar'
 
 function App() {
-  const dispatch = useDispatch()
-  
-  const {data,isLoadingData} = useSelector(
-    (state) => state
-  );
-
-  useEffect(() => {
-    dispatch(fetchContacts())
-  },[dispatch]);
-
   return (
     <div className="App">
-      {isLoadingData?<div>loading</div>:<div>ini contoh aja</div>}
+      <Navbar/>
+      <Contact/>
     </div>
   );
 }
