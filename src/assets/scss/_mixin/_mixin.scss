@@ -2,11 +2,11 @@
     margin-#{$margin}: $value;
   }
   
-  @for $i from 1 through 20 {
+  @for $i from 1 through 100 {
     @each $margin in top, left, bottom, right {
   
       .offset-#{$margin}-#{$i}{
-        @include offset-margin($margin, 1rem * $i) 
+        @include offset-margin($margin, 1px * $i) 
       }
   
     }

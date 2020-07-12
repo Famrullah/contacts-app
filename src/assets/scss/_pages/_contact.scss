@@ -1,12 +1,27 @@
+.contact{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 5px;
+}
+
 .contact-list{
     background: #ddd;
     padding: 10px;
     display: flex;
-    margin: 20px 0;
     min-height: 100px;
+    font-size: 1.5rem;
+    line-height: 2;
+    font-family: $font-family-cardo;
 
     &__desc{
         flex: 3;
+        display: grid;
+        grid-template-columns: 1fr 10fr;
+
+        span{
+            font-family: $font-family-montserrat;
+            font-size: 1rem;
+        }
     }
 
     &__action{
@@ -14,10 +29,33 @@
         text-align: right;
         position: relative;
 
+         span{
+            font-family: $font-family-montserrat;
+            font-size: 1rem;
+        }
+
         button{
             position: absolute;
             bottom: 0;
             right: 0;
+            background: aqua;
+            color: #666;
         }
+    }
+}
+
+@media only screen and (max-width: 1080px ) {
+    .contact{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10px;
+    }
+}
+
+@media only screen and (max-width: $bp-small ) {
+    .contact{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
     }
 }

@@ -2,12 +2,15 @@ import React, {useEffect} from 'react';
 import { fetchContacts } from "../../store/actions";
 import { useDispatch,useSelector } from 'react-redux'
 
+
+
 function Contacts() {
   const dispatch = useDispatch()
   
   const {isLoadingData} = useSelector(
     (state) => state
   );
+
 
   useEffect(() => {
     dispatch(fetchContacts())
@@ -16,14 +19,104 @@ function Contacts() {
   return (
     <div className="contacts-app-container">
       {isLoadingData?<div>loading</div>:
-        <div className="grid-container container--fit">
+        <div className="contact">
           <div className="contact-list">
             <div className="contact-list__desc">
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
-              and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+              <img src="https://source.unsplash.com/random/1" class="profile-photo circle" alt=""/>
+              <div className="offset-left-20">
+                <h3> Faisal Amrullah</h3>
+                <span>amrullahfaisal@gmail.com</span>
+                <br/>
+                <span>081806868501</span>
+              </div>
             </div>
             <div className="contact-list__action">
-              <p>Count : 0</p>
+              <span>Count : 0</span>
+              <button className="btn">Edit</button>
+            </div>
+          </div>
+          <div className="contact-list">
+            <div className="contact-list__desc">
+              <img src="https://source.unsplash.com/random/2" class="profile-photo circle" alt=""/>
+              <div className="offset-left-20">
+                <h3> Faisal Amrullah</h3>
+                <span>amrullahfaisal@gmail.com</span>
+                <br/>
+                <span>081806868501</span>
+              </div>
+            </div>
+            <div className="contact-list__action">
+              <span>Count : 0</span>
+              <button className="btn">Edit</button>
+            </div>
+          </div><div className="contact-list">
+            <div className="contact-list__desc">
+              <img src="https://source.unsplash.com/random/3" class="profile-photo circle" alt=""/>
+              <div className="offset-left-20">
+                <h3> Faisal Amrullah</h3>
+                <span>amrullahfaisal@gmail.com</span>
+                <br/>
+                <span>081806868501</span>
+              </div>
+            </div>
+            <div className="contact-list__action">
+              <span>Count : 0</span>
+              <button className="btn">Edit</button>
+            </div>
+          </div><div className="contact-list">
+            <div className="contact-list__desc">
+              <img src="https://source.unsplash.com/random/4" class="profile-photo circle" alt=""/>
+              <div className="offset-left-20">
+                <h3> Faisal Amrullah</h3>
+                <span>amrullahfaisal@gmail.com</span>
+                <br/>
+                <span>081806868501</span>
+              </div>
+            </div>
+            <div className="contact-list__action">
+              <span>Count : 0</span>
+              <button className="btn">Edit</button>
+            </div>
+          </div><div className="contact-list">
+            <div className="contact-list__desc">
+              <img src="https://source.unsplash.com/random/5" class="profile-photo circle" alt=""/>
+              <div className="offset-left-20">
+                <h3> Faisal Amrullah</h3>
+                <span>amrullahfaisal@gmail.com</span>
+                <br/>
+                <span>081806868501</span>
+              </div>
+            </div>
+            <div className="contact-list__action">
+              <span>Count : 0</span>
+              <button className="btn">Edit</button>
+            </div>
+          </div><div className="contact-list">
+            <div className="contact-list__desc">
+              <img src="https://source.unsplash.com/random/6" class="profile-photo circle" alt=""/>
+              <div className="offset-left-20">
+                <h3> Faisal Amrullah</h3>
+                <span>amrullahfaisal@gmail.com</span>
+                <br/>
+                <span>081806868501</span>
+              </div>
+            </div>
+            <div className="contact-list__action">
+              <span>Count : 0</span>
+              <button className="btn">Edit</button>
+            </div>
+          </div><div className="contact-list">
+            <div className="contact-list__desc">
+              <img src="https://source.unsplash.com/random/7" class="profile-photo circle" alt=""/>
+              <div className="offset-left-20">
+                <h3> Faisal Amrullah</h3>
+                <span>amrullahfaisal@gmail.com</span>
+                <br/>
+                <span>081806868501</span>
+              </div>
+            </div>
+            <div className="contact-list__action">
+              <span>Count : 0</span>
               <button className="btn">Edit</button>
             </div>
           </div>
