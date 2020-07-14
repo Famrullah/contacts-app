@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
 import { success } from "../../store/actions";
-import { useDispatch ,useSelector} from 'react-redux'
+import { useDispatch } from 'react-redux'
 
 const ContactList = (props) => {
     const dispatch = useDispatch()
@@ -12,9 +12,6 @@ const ContactList = (props) => {
     })
     const [count,setCount] = useState(null)
     const [isEdit,setIsEdit] = useState(false)
-    const message = useSelector(
-        (state) => state
-    );
 
     const increment = value => {
         if(value.UpdatedBy == null){
