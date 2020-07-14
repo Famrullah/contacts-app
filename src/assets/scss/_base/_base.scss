@@ -59,3 +59,22 @@ body {
 .circle{
     border-radius: 50%;
 }
+
+h3{
+    font-size: 1.5rem;
+}
+
+input{
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    padding: 5px 10px;
+    margin: 5px 0;
+}
+
+.disabled{
+    border: 1px solid #999999;
+    background-color: #cccccc !important;
+    color: #666666;
+    opacity: 0.6;
+    cursor: no-drop;
+}

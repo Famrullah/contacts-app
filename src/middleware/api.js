@@ -4,7 +4,6 @@ import { accessDenied, apiError, apiStart, apiEnd } from "../store/actions/api";
 
 const apiMiddleware = ({ dispatch }) => next => action => {
   next(action);
-  console.log('next',action)
 
   if (action.type !== API) return;
 
@@ -20,7 +19,7 @@ const apiMiddleware = ({ dispatch }) => next => action => {
   const dataOrParams = ["GET"].includes(method) ? "params" : "data";
 
   // axios default configs
-  axios.defaults.baseURL = "https://swapi.dev/api/";
+  axios.defaults.baseURL = "http://www.mocky.io/v2/";
 
   if (label) {
     dispatch(apiStart(label));

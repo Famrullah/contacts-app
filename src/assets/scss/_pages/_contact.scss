@@ -1,7 +1,7 @@
 .contact{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 5px;
+    grid-gap: 10px;
 }
 
 .contact-list{
@@ -14,13 +14,21 @@
     font-family: $font-family-cardo;
 
     &__desc{
-        flex: 3;
+        flex: 4;
         display: grid;
-        grid-template-columns: 1fr 10fr;
+        grid-template-columns: 1fr 11fr;
 
-        span{
+        p{
             font-family: $font-family-montserrat;
             font-size: 1rem;
+        }
+
+        h3{
+            width: max-content;
+            cursor: pointer;
+            &:hover{
+                color: red;
+            }
         }
     }
 

@@ -1,5 +1,6 @@
-export const FETCH_CONTACTS = "FETCH_CONTACTS";
+export const FETCH = "FETCH";
 export const SET_CONTACTS = "SET_CONTACTS";
+export const SET_SUCCESS = "SET_SUCCESS";
 
 export const API = "API";
 export const API_START = "API_START";

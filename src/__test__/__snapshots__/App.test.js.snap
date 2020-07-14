@@ -1,0 +1,300 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`With React Testing Library should render app and snapshot" 1`] = `
+<DocumentFragment>
+  <div
+    class="App"
+  >
+    <div
+      class="navbar"
+    >
+      <div
+        class="contacts-app-container"
+      >
+        ini navbar
+      </div>
+    </div>
+    <div
+      class="contacts-app-container"
+    >
+      <div
+        class="contact"
+      >
+        <div
+          class="contact-list"
+        >
+          <div
+            class="contact-list__desc"
+          >
+            <img
+              alt=""
+              class="profile-photo circle"
+              src="https://source.unsplash.com/random/1"
+            />
+            <div
+              class="offset-left-20"
+            >
+              <h3>
+                 Faisal Amrullah
+              </h3>
+              <span>
+                amrullahfaisal@gmail.com
+              </span>
+              <br />
+              <span>
+                081806868501
+              </span>
+            </div>
+          </div>
+          <div
+            class="contact-list__action"
+          >
+            <span>
+              Count : 0
+            </span>
+            <button
+              class="btn"
+            >
+              Edit
+            </button>
+          </div>
+        </div>
+        <div
+          class="contact-list"
+        >
+          <div
+            class="contact-list__desc"
+          >
+            <img
+              alt=""
+              class="profile-photo circle"
+              src="https://source.unsplash.com/random/2"
+            />
+            <div
+              class="offset-left-20"
+            >
+              <h3>
+                 Faisal Amrullah
+              </h3>
+              <span>
+                amrullahfaisal@gmail.com
+              </span>
+              <br />
+              <span>
+                081806868501
+              </span>
+            </div>
+          </div>
+          <div
+            class="contact-list__action"
+          >
+            <span>
+              Count : 0
+            </span>
+            <button
+              class="btn"
+            >
+              Edit
+            </button>
+          </div>
+        </div>
+        <div
+          class="contact-list"
+        >
+          <div
+            class="contact-list__desc"
+          >
+            <img
+              alt=""
+              class="profile-photo circle"
+              src="https://source.unsplash.com/random/3"
+            />
+            <div
+              class="offset-left-20"
+            >
+              <h3>
+                 Faisal Amrullah
+              </h3>
+              <span>
+                amrullahfaisal@gmail.com
+              </span>
+              <br />
+              <span>
+                081806868501
+              </span>
+            </div>
+          </div>
+          <div
+            class="contact-list__action"
+          >
+            <span>
+              Count : 0
+            </span>
+            <button
+              class="btn"
+            >
+              Edit
+            </button>
+          </div>
+        </div>
+        <div
+          class="contact-list"
+        >
+          <div
+            class="contact-list__desc"
+          >
+            <img
+              alt=""
+              class="profile-photo circle"
+              src="https://source.unsplash.com/random/4"
+            />
+            <div
+              class="offset-left-20"
+            >
+              <h3>
+                 Faisal Amrullah
+              </h3>
+              <span>
+                amrullahfaisal@gmail.com
+              </span>
+              <br />
+              <span>
+                081806868501
+              </span>
+            </div>
+          </div>
+          <div
+            class="contact-list__action"
+          >
+            <span>
+              Count : 0
+            </span>
+            <button
+              class="btn"
+            >
+              Edit
+            </button>
+          </div>
+        </div>
+        <div
+          class="contact-list"
+        >
+          <div
+            class="contact-list__desc"
+          >
+            <img
+              alt=""
+              class="profile-photo circle"
+              src="https://source.unsplash.com/random/5"
+            />
+            <div
+              class="offset-left-20"
+            >
+              <h3>
+                 Faisal Amrullah
+              </h3>
+              <span>
+                amrullahfaisal@gmail.com
+              </span>
+              <br />
+              <span>
+                081806868501
+              </span>
+            </div>
+          </div>
+          <div
+            class="contact-list__action"
+          >
+            <span>
+              Count : 0
+            </span>
+            <button
+              class="btn"
+            >
+              Edit
+            </button>
+          </div>
+        </div>
+        <div
+          class="contact-list"
+        >
+          <div
+            class="contact-list__desc"
+          >
+            <img
+              alt=""
+              class="profile-photo circle"
+              src="https://source.unsplash.com/random/6"
+            />
+            <div
+              class="offset-left-20"
+            >
+              <h3>
+                 Faisal Amrullah
+              </h3>
+              <span>
+                amrullahfaisal@gmail.com
+              </span>
+              <br />
+              <span>
+                081806868501
+              </span>
+            </div>
+          </div>
+          <div
+            class="contact-list__action"
+          >
+            <span>
+              Count : 0
+            </span>
+            <button
+              class="btn"
+            >
+              Edit
+            </button>
+          </div>
+        </div>
+        <div
+          class="contact-list"
+        >
+          <div
+            class="contact-list__desc"
+          >
+            <img
+              alt=""
+              class="profile-photo circle"
+              src="https://source.unsplash.com/random/7"
+            />
+            <div
+              class="offset-left-20"
+            >
+              <h3>
+                 Faisal Amrullah
+              </h3>
+              <span>
+                amrullahfaisal@gmail.com
+              </span>
+              <br />
+              <span>
+                081806868501
+              </span>
+            </div>
+          </div>
+          <div
+            class="contact-list__action"
+          >
+            <span>
+              Count : 0
+            </span>
+            <button
+              class="btn"
+            >
+              Edit
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

@@ -1,16 +1,20 @@
-import React, {useEffect} from 'react';
+import React, {useEffect,Suspense} from 'react';
 import { fetchContacts } from "../../store/actions";
 import { useDispatch,useSelector } from 'react-redux'
 
-
+const ContactList = React.lazy(() => {
+  return new Promise((resolve) => {
+    setTimeout(() => resolve(import('./contact-list')), 2000);
+  });
+});
 
 function Contacts() {
   const dispatch = useDispatch()
   
-  const {isLoadingData} = useSelector(
+  // global state from redux
+  const {data} = useSelector(
     (state) => state
   );
-
 
   useEffect(() => {
     dispatch(fetchContacts())
@@ -18,110 +22,11 @@ function Contacts() {
 
   return (
     <div className="contacts-app-container">
-      {isLoadingData?<div>loading</div>:
-        <div className="contact">
-          <div className="contact-list">
-            <div className="contact-list__desc">
-              <img src="https://source.unsplash.com/random/1" class="profile-photo circle" alt=""/>
-              <div className="offset-left-20">
-                <h3> Faisal Amrullah</h3>
-                <span>amrullahfaisal@gmail.com</span>
-                <br/>
-                <span>081806868501</span>
-              </div>
-            </div>
-            <div className="contact-list__action">
-              <span>Count : 0</span>
-              <button className="btn">Edit</button>
-            </div>
-          </div>
-          <div className="contact-list">
-            <div className="contact-list__desc">
-              <img src="https://source.unsplash.com/random/2" class="profile-photo circle" alt=""/>
-              <div className="offset-left-20">
-                <h3> Faisal Amrullah</h3>
-                <span>amrullahfaisal@gmail.com</span>
-                <br/>
-                <span>081806868501</span>
-              </div>
-            </div>
-            <div className="contact-list__action">
-              <span>Count : 0</span>
-              <button className="btn">Edit</button>
-            </div>
-          </div><div className="contact-list">
-            <div className="contact-list__desc">
-              <img src="https://source.unsplash.com/random/3" class="profile-photo circle" alt=""/>
-              <div className="offset-left-20">
-                <h3> Faisal Amrullah</h3>
-                <span>amrullahfaisal@gmail.com</span>
-                <br/>
-                <span>081806868501</span>
-              </div>
-            </div>
-            <div className="contact-list__action">
-              <span>Count : 0</span>
-              <button className="btn">Edit</button>
-            </div>
-          </div><div className="contact-list">
-            <div className="contact-list__desc">
-              <img src="https://source.unsplash.com/random/4" class="profile-photo circle" alt=""/>
-              <div className="offset-left-20">
-                <h3> Faisal Amrullah</h3>
-                <span>amrullahfaisal@gmail.com</span>
-                <br/>
-                <span>081806868501</span>
-              </div>
-            </div>
-            <div className="contact-list__action">
-              <span>Count : 0</span>
-              <button className="btn">Edit</button>
-            </div>
-          </div><div className="contact-list">
-            <div className="contact-list__desc">
-              <img src="https://source.unsplash.com/random/5" class="profile-photo circle" alt=""/>
-              <div className="offset-left-20">
-                <h3> Faisal Amrullah</h3>
-                <span>amrullahfaisal@gmail.com</span>
-                <br/>
-                <span>081806868501</span>
-              </div>
-            </div>
-            <div className="contact-list__action">
-              <span>Count : 0</span>
-              <button className="btn">Edit</button>
-            </div>
-          </div><div className="contact-list">
-            <div className="contact-list__desc">
-              <img src="https://source.unsplash.com/random/6" class="profile-photo circle" alt=""/>
-              <div className="offset-left-20">
-                <h3> Faisal Amrullah</h3>
-                <span>amrullahfaisal@gmail.com</span>
-                <br/>
-                <span>081806868501</span>
-              </div>
-            </div>
-            <div className="contact-list__action">
-              <span>Count : 0</span>
-              <button className="btn">Edit</button>
-            </div>
-          </div><div className="contact-list">
-            <div className="contact-list__desc">
-              <img src="https://source.unsplash.com/random/7" class="profile-photo circle" alt=""/>
-              <div className="offset-left-20">
-                <h3> Faisal Amrullah</h3>
-                <span>amrullahfaisal@gmail.com</span>
-                <br/>
-                <span>081806868501</span>
-              </div>
-            </div>
-            <div className="contact-list__action">
-              <span>Count : 0</span>
-              <button className="btn">Edit</button>
-            </div>
-          </div>
-      </div>
-      }
+      <Suspense fallback={<div>loading</div>}>
+        <ContactList 
+          data ={data}
+        />
+      </Suspense>
     </div>
   );
 }
