@@ -1,6 +1,7 @@
 import React,{useState} from 'react'
 import { success } from "../../store/actions";
-import { useDispatch } from 'react-redux'
+import { useDispatch,useSelector } from 'react-redux'
+import Modal from '../../components/modal/modal'
 
 const ContactList = (props) => {
     const dispatch = useDispatch()
@@ -10,8 +11,13 @@ const ContactList = (props) => {
         Email:'',
         Mobile:''
     })
+    const [showModal, setShowModal] = useState(false)
     const [count,setCount] = useState(null)
     const [isEdit,setIsEdit] = useState(false)
+
+    const {msg} = useSelector(
+        (state) => state
+    );
 
     const increment = value => {
         if(value.UpdatedBy == null){
@@ -28,14 +34,13 @@ const ContactList = (props) => {
         }
     }
 
-
-
     const saveContacts = (value) => {
         value.Email = formValue.Email
         value.Mobile = formValue.Mobile
         value.UpdateTs = !value.UpdateTs
         setIsEdit(!isEdit)
         dispatch(success())
+        setShowModal(!showModal)
     }
 
     // on change form input
@@ -44,7 +49,6 @@ const ContactList = (props) => {
             ...formValue,
             [e.target.name]:e.target.value
         })
-        console.log(e.target.name)
     }
 
      //Show Form Edit if edit button has been clicked
@@ -64,6 +68,9 @@ const ContactList = (props) => {
 
     return(
         <div className="contact">
+            <Modal show={showModal} modalClosed={()=> setShowModal(!showModal)}>
+                {msg}
+            </Modal>
             {data.data.map((item,index)=> (
                <div className="contact-list" key={index}>
                 <div className="contact-list__desc">
@@ -72,7 +79,7 @@ const ContactList = (props) => {
                         <h3 className="offset-bottom-10 crs-pointer" onClick={() => increment(item)}> {item.Name}</h3>
                         {item.UpdateTs && isEdit? 
                             <React.Fragment>
-                                <input name="Email" onChange={handleForm} value={formValue.Email}></input>
+                                <input name="Email" onChange={handleForm} value={formValue.Email} type="text"></input>
                                 <input name="Mobile" onChange={handleForm} value={formValue.Mobile}></input>
                             </React.Fragment>:
                             <React.Fragment>
